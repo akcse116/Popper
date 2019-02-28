@@ -20,4 +20,9 @@ def sprites():
     return static_file('sprites.png', root='')
 
 
+@route('/api')
+def api():
+    return
+
+
 run(host='127.0.0.1', port=8080)
