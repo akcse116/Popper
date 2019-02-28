@@ -1,0 +1,16 @@
+body {
+    background-color: #1b5a99;
+    padding: 2%;
+    margin: 2%;
+    text-align: center;
+}
+
+canvas {
+    alignment: center;
+    border: 4px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 1%;
+
+}
