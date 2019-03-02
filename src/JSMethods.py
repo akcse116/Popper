@@ -17,4 +17,3 @@ def getGameStateJson():
             content += line
     return content
 
-
