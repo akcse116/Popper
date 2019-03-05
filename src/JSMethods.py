@@ -1,19 +1,29 @@
+
 import json
 
 
-filename= 'gameState.json'
+filename = 'gameState.json'
 
 
-def saveJsom(string):
+def toJson(string):
     newJson = json.dumps(string)
-    with open(filename, "w") as file:
-        file.write(newJson)
+    return newJson
 
 
-def getGameStateJson():
+def fromJson(jsonfile):
+    save = json.loads(jsonfile)
+    return save
+
+
+def saveGameState(state, file):
+    with open(file, "w") as file:
+        file.write(state)
+
+
+def getGameState(file):
     content = ''
-    with open(filename) as file:
-        for line in file:
-            content += line
+    with open(file) as f:
+        for line in f:
+            content += line.rstrip('\r\n')
     return content
 
