@@ -1,29 +1,31 @@
 from bottle import route, run, get, post, template, static_file
 import JSMethods
 
-@get('/')
+@route('/')
 def index():
     return static_file('index.html', root='')
 
 
-@get('/style.css')
+@route('/style.css')
 def stylesheets():
     return static_file('style.css', root='')
 
 
-@get('/main.js')
+@route('/main.js')
 def javascript():
     return static_file('main.js', root='')
 
 
-@get('/sprites')
+@route('/sprites')
 def sprites():
     return static_file('sprites.png', root='')
 
 
-@get('/api')
+@route('/api')
 def api():
-    return static_file('gameState.json', root='')
+    filename = 'gameState.json'
+    return JSMethods.getGameState(filename)
+    # return static_file('gameState.json', root='')
 
 
 @post('/updateState/<current>')  # Needs Further Expansion
