@@ -20,7 +20,7 @@ class TestJSMethods(unittest.TestCase):
 
     def test_saveLoad(self):
 
-        filename = "testFile.jsom"
+        filename = "testFile.json"
         test = '{"time": 12345678, "player001": {"angle": 105, "score": 50000}}'
 
         JSMethods.saveGameState(test, filename)
